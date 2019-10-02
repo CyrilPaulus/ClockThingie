@@ -8,6 +8,9 @@ project(ClockThingie)
 ## In most cases better set in the CMake cache
 # set(SFML_DIR "<sfml root prefix>/lib/cmake/SFML")
 
-find_package(SFML 2.5 COMPONENTS graphics REQUIRED)
-add_executable(ClockThingie src/ball.cpp src/game.cpp src/main.cpp)
-target_link_libraries(ClockThingie sfml-graphics)
+find_package(gf REQUIRED)
+add_executable(ClockThingie 
+        src/ball.cpp 
+        src/game.cpp 
+        src/main.cpp)
+target_link_libraries(ClockThingie gf::gf0)

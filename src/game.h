@@ -1,6 +1,10 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-
+#include <gf/Event.h>
+#include <gf/Font.h>
+#include <gf/RenderWindow.h>
+#include <gf/Sprite.h>
+#include <gf/Text.h>
+#include <gf/Window.h>
 
 class Game {
 
@@ -9,7 +13,8 @@ class Game {
         void Run();
 
     private:
-        sf::RenderWindow* _window;
+        gf::Window* _window;
+        gf::RenderWindow* _renderer;
 
         void Update(float frametime);
         
